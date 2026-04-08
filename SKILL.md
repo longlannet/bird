@@ -1,6 +1,29 @@
 ---
 name: bird
 description: X/Twitter CLI for reading, searching, and posting via bird. Use when the user wants to read tweets, search X, inspect threads, mentions, timelines, bookmarks, or post/reply on X/Twitter.
+homepage: https://github.com/longlannet/bird
+metadata:
+  {
+    "openclaw":
+      {
+        "emoji": "🐦",
+        "requires":
+          {
+            "bins": ["bird"],
+            "config": ["config.env"],
+          },
+        "install":
+          [
+            {
+              "id": "node-bird",
+              "kind": "node",
+              "package": "@steipete/bird",
+              "bins": ["bird"],
+              "label": "Install bird (node)",
+            },
+          ],
+      },
+  }
 ---
 
 # Bird
