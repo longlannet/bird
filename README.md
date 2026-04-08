@@ -1,27 +1,27 @@
 # bird
 
-X/Twitter reading, search, and posting through the `bird` CLI.
+面向 OpenClaw 的 X/Twitter 读取、搜索与发帖 skill，底层使用 `bird` CLI。
 
-## What it does
+## 它能做什么
 
-- read tweets, threads, replies, and timelines
-- search X/Twitter and inspect accounts
-- check mentions, bookmarks, likes, followers, and following
-- post tweets or replies when authenticated
+- 读取推文、线程、回复、时间线
+- 搜索 X/Twitter 内容并查看账号信息
+- 查看 mentions、bookmarks、likes、followers、following
+- 在已认证前提下发帖或回复
 
-## Install
+## 安装
 
 ```bash
 bash scripts/install.sh
 ```
 
-## Validate
+## 校验
 
 ```bash
 bash scripts/check.sh
 ```
 
-## Quick commands
+## 常用命令
 
 ```bash
 source config.env && bird read <tweet-id-or-url> --json
@@ -30,8 +30,8 @@ source config.env && bird user-tweets <handle>
 source config.env && bird mentions
 ```
 
-## Notes
+## 说明
 
-- `config.env` is runtime config and should not be committed.
-- Run from the skill root so `config.env` is loaded correctly.
-- Re-run `scripts/install.sh` if `bird` is missing.
+- `config.env` 是运行时配置，不应提交到仓库。
+- 请在 skill 根目录执行命令，确保 `config.env` 能被正确加载。
+- 如果 `bird` 缺失或环境损坏，重新运行 `scripts/install.sh`。
