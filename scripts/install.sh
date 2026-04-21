@@ -6,7 +6,7 @@ CONFIG_FILE="$BASE_DIR/config.env"
 GLOBAL_NPM_PREFIX="${GLOBAL_NPM_PREFIX:-/root/.openclaw/workspace/.npm-global}"
 GLOBAL_BIRD_BIN="$GLOBAL_NPM_PREFIX/bin/bird"
 
-log() { printf '[bird] %s\n' "$*"; }
+log() { printf '[bird] %s\n' "$*" >&2; }
 fail() { printf '[bird] ERROR: %s\n' "$*" >&2; exit 1; }
 
 resolve_bird() {
